@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>David Mifsud's</title>
+    <title>David Mifsud &mdash; Front-End Developer</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
@@ -28,7 +28,14 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" rel="stylesheet"></script>
     <style>
 
+      body{
+        background-color: #ddd;
+      }
 
+      .container {
+        background-color: #FFF;
+        padding: 20px;
+      }
 
       .\#profile-details h1,
       .\#profession,
@@ -38,8 +45,7 @@
 
 
       .\#profile-details h1 {
-        letter-spacing: 7px;
-        font-weight: bold;
+        letter-spacing: 3px;
       }
 
       .\#contact {
@@ -51,7 +57,9 @@
       }
 
       .\#profession {
-        font-size: 27px;
+        font-size: 25px;
+        font-weight: lighter;
+        letter-spacing: 1px;
       }
 
       .progress {
@@ -74,9 +82,37 @@
 
       .blockquote {
         font-style: italic;
+        font-size: 17px;
         font-family: Georgia, Times, "Times New Roman", sans-serif;
         color: #777;
       }
+
+
+
+
+
+      /* ==== MEDIA QUERIES ==== */
+
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+          margin: 20px auto;
+          box-shadow: 0 0 4px 0px rgba(0,0,0,0.1);
+          padding: 45px;
+        }
+      }
+
+      /* ==== IPhone 4/5 ==== */
+
+
+      @media (max-width: 320px) {
+        .container {
+          padding: 14px;
+        }
+      }
+
+      /* ==== PRINT ==== */
+
 
       @media print {
 
@@ -103,21 +139,21 @@
         }
 
         h3, .\#profession {
-          font-size: 20px !important;
+          font-size: 18px !important;
         }
 
       }
     </style>
   </head>
   <body>
-    <div>
+    <section>
       <div class='container'>
         <div class="row #profile-details">
-          <div class="col-md-6 col-sm-6">
+          <div class="col-sm-6">
             <h1>David Mifsud</h1>
             <p class="#profession">Front&ndash;End Developer</p>
           </div>
-          <div class="col-md-6 col-sm-6">
+          <div class="col-sm-6">
             <div class="#contact">
               <p><b>Email</b> david.mifsud89@gmail.com</p>
               <p><b>Contact</b> (+356) 79095837</p>
@@ -127,7 +163,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6 col-sm-6">
+          <div class="col-sm-6">
             <h3>Education</h3>
 
             <p>
@@ -147,7 +183,7 @@
             </p>
 
           </div>
-          <div class="col-md-6 col-sm-6">
+          <div class="col-sm-6">
             <h3>Experience</h3>
 
             <p>
@@ -179,7 +215,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6 col-sm-6">
+          <div class="col-sm-6">
             <h3>Skills Summary</h3>
 
             <p>
@@ -228,9 +264,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-6">
+          <div class="col-sm-6">
             <h3>Profile</h3>
-            <blockquote class="blockquote">
+            <div class="blockquote">
               <p>
                 &ldquo;Passionate about everything front&ndash;end related. Interested in
 
@@ -251,12 +287,12 @@
 
                 better.&rdquo;
               </p>
-            </blockquote>
+            </div>
           </div>
         </div>
 
 
       </div>
-    </div>
+    </section>
   </body>
 </html>
