@@ -53,7 +53,7 @@
       }
 
       h1, h3 , .\#profession{
-        color:  #31b0d5 !important; /* Important is due to print issue */
+        color:  #337ab7 !important; /* Important is due to print issue */
       }
 
       .\#profession {
@@ -68,22 +68,19 @@
         -webkit-box-shadow: none;
         box-shadow: none;
         border-radius: 0;
-        border: 1px solid #31b0d5;
+        border: 1px solid #337ab7;
       }
 
       .progress-bar-info {
-        background-color: #31b0d5;
+        background-color: #337ab7;
       }
 
       .blockquote {
         font-style: italic;
         font-size: 17px;
         font-family: Georgia, Times, "Times New Roman", sans-serif;
-        color: #777;
+        color: #777 !important;
       }
-
-
-
 
 
       /* ==== MEDIA QUERIES ==== */
@@ -141,6 +138,14 @@
           font-size: 18px !important;
         }
 
+        .\#print {
+          display: none;
+        }
+
+        a[href]:after {
+          content: none !important;
+        }
+
       }
     </style>
   </head>
@@ -154,9 +159,13 @@
           </div>
           <div class="col-sm-6">
             <div class="#contact">
-              <p><b>Email</b> david.mifsud89@gmail.com</p>
-              <p><b>Contact</b> (+356) 79095837</p>
-              <p><b>Born</b> 05/04/1989 </p>
+              <p title="Email"><span class='glyphicon glyphicon-envelope'></span> david.mifsud89@gmail.com</p>
+              <p title="Contact"><span class='glyphicon glyphicon-phone'></span> (+356) 79095837</p>
+              <p title="Born"><span class='glyphicon glyphicon-calendar'></span> 1989-04-05 </p>
+              <p title="Online Profile">
+                <span class="glyphicon glyphicon-globe"></span>
+                <a href="https://github.com/dmifsud">github.com/dmifsud</a>
+              </p>
             </div>
           </div>
         </div>
@@ -210,6 +219,9 @@
               <div><b>Freelance</b> &mdash; Web Developer</div>
             </p>
 
+            <!-- <p class='text-center'>
+              <a href="#" class='glyphicon glyphicon-chevron-down'></a>
+            </p> -->
           </div>
         </div>
 
@@ -287,6 +299,7 @@
                 better.&rdquo;
               </p>
             </div>
+            <a href="javascript:window.print()" class='#print pull-right'><span class='glyphicon glyphicon-print'></span> Print</a>
           </div>
         </div>
 
