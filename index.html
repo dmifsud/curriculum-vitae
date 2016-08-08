@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>David Mifsud &mdash; Front-End Developer</title>
+    <title>David Mifsud - Front-End Developer</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
@@ -60,15 +60,14 @@
       }
 
       h1 {
-        font-size: 36px;
+        font-size: 38px;
       }
 
       h3 {
         font-size: 24px;
       }
 
-      .container h3,
-      .container p {
+      .container h3{
         margin: 0 0 10px 0;
       }
 
@@ -86,7 +85,6 @@
 
       .container {
         background-color: #FFF;
-        padding: 20px;
       }
 
 
@@ -103,7 +101,7 @@
       }
 
 
-      h1, h3 , .\#profession{
+      h1, h3{
         color:  #337ab7 !important; /* Important is due to print issue */
       }
 
@@ -116,8 +114,16 @@
         text-decoration:underline;;
       }
 
+      p {
+        line-height: 1.5em;
+      }
+
+      p , .\#profession{
+        color: #333;
+      }
+
       .\#profession {
-        font-size: 24.5px;
+        font-size: 23px;
         font-weight: lighter;
         letter-spacing: 1px;
       }
@@ -132,7 +138,7 @@
       .\#progress-bar {
         height: 12px;
         margin: -2px 0 0 -2px;
-        background-color: #337ab7 !important;
+        background-color: #81b6e4 !important;
       }
 
       .progress {
@@ -157,17 +163,46 @@
 
 
       .row {
-        margin: 26px 0 0 0;
         display:flex;
-        justify-content:space-around;
+        justify-content:space-between;
       }
 
 
       .col-sm-6 {
         box-sizing:border-box;
-        padding: 0 15px;
       }
 
+
+      .timeline {
+          margin-top:15px;
+      }
+
+      .timeline .date {
+        width: 80px;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      .timeline .description {
+        display: inline-block;
+      }
+
+
+      .skill {
+          margin-top:15px;
+      }
+
+      .skill .type {
+        width: 35%;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      .skill .percentage {
+        width: 57%;
+        display: inline-block;
+        margin-top: 6px;
+      }
 
 
       /* ==== MEDIA QUERIES ==== */
@@ -178,29 +213,36 @@
         .container {
           max-width: 720px;
           margin: 20px auto;
+          padding:75px;
           box-shadow: 0 0 4px 0px rgba(0,0,0,0.1);
-          padding: 45px;
+        }
+
+        .row:not(:first-child) {
+          margin-top: 50px;
         }
 
         .row {
-          margin: 32px 0 0 0;
           flex-flow: row wrap;
         }
 
         .col-sm-6 {
-          width:50%;
-          padding: 0 25px;
+          width: calc(50% - 25px);
         }
 
-
-        .container .row:nth-child(2) {
-          margin-top: 60px;
-        }
       }
 
       /* ==== Less than 768px ==== */
 
       @media (max-width: 767px) {
+
+        h1 {
+          font-size: 8vw;
+        }
+
+        .\#profession {
+          font-size: 5vw;
+        }
+
         .row {
           margin: 20px 0 0 0;
           flex-direction:column;
@@ -216,12 +258,12 @@
 
 
       @media (max-width: 320px) {
-        .container {
+        /*.container {
           padding: 14px;
         }
         .col-sm-6 {
           padding: 0;
-        }
+        }*/
       }
 
       /* ==== PRINT ==== */
@@ -242,11 +284,11 @@
         }
 
         .container h1 {
-          font-size: 35px;
+          font-size: 38px;
         }
 
         .container .\#profession {
-          font-size: 24px;
+          font-size: 23px;
         }
 
 
@@ -286,50 +328,86 @@
           <div class="col-sm-6">
             <h3>Education</h3>
 
-            <p>
-              <div>2011 &mdash; 2012</div>
-              <div><b>BSc Degree</b> &mdash; University of Fraunhofer</div>
-            </p>
+            <div class='timeline'>
+              <div class='date'>
+                <p>2011 - 12</p>
+              </div>
+              <div class='description'>
+                <p><b>BSc Degree</b></p>
+                <p>University of Fraunhofer</p>
+              </div>
+            </div>
 
-            <p>
-              <div>2009 &mdash; 2011</div>
-              <div><b>Higher National Diploma</b> &mdash; MCAST</div>
-            </p>
+            <div class='timeline'>
+              <div class='date'><p>2009 - 11</p></div>
+              <div class='description'>
+                <p><b>Higher National Diploma</b></p>
+                <p>MCAST</p>
+              </div>
+            </div>
 
 
-            <p>
-              <div>2007 &mdash; 2009</div>
-              <div><b>National Diploma</b> &mdash; MCAST</div>
-            </p>
+            <div class='timeline'>
+              <div class='date'><p>2007 - 09</p></div>
+              <div class='description'>
+                <p><b>National Diploma</b></p>
+                <p>MCAST</p>
+              </div>
+            </div>
 
           </div>
           <div class="col-sm-6">
             <h3>Experience</h3>
 
-            <p>
-              <div>2015</div>
-              <div><b>Concentric Data Services</b> &mdash; Lead Front-End Developer</div>
-            </p>
+            <div class='timeline'>
+              <div class='date'>
+                <p>2015 - Present</p>
+              </div>
+              <div class='description'>
+                <p><b>Concentric Data Services</b></p>
+                <p>Lead Front-End Developer</p>
+              </div>
+            </div>
 
-            <p>
-              <div>2014 &mdash; 2015</div>
-              <div><b>Betclic Everest</b> &mdash; Lead Front-End Developer, Mobile</div>
-            </p>
+            <div class='timeline'>
+              <div class='date'>
+                <p>2014 - 15</p>
+              </div>
+              <div class='description'>
+                <p><b>Betclic Everest</b></p>
+                <p>Lead Front-End Developer, Mobile</p>
+              </div>
+            </div>
 
-            <p>
-              <div>2013 &mdash; 2014</div>
-              <div><b>Raw Biscuits</b> &mdash; Front-End Developer</div>
-            </p>
+            <div class='timeline'>
+              <div class='date'>
+                <p>2013 - 14</p>
+              </div>
+              <div class='description'>
+                <p><b>Raw Biscuits</b></p>
+                <p>Front-End Developer</p>
+              </div>
+            </div>
 
-            <p>
-              <div>2012 &mdash; 2013</div>
-              <div><b>Titan Gaming Ltd</b> &mdash; Full Stack .NET Developer</div>
-            </p>
+            <div class='timeline'>
+              <div class='date'>
+                <p>2012 - 13</p>
+              </div>
+              <div class='description'>
+                <p><b>Titan Gaming Ltd</b></p>
+                <p>Full Stack .NET Developer</p>
+              </div>
+            </div>
 
-            <p>
-              <div>2010 &mdash; 2012</div>
-              <div><b>Freelance</b> &mdash; Web Developer</div>
-            </p>
+            <div class='timeline'>
+              <div class='date'>
+                <p>2010 - 12</p>
+              </div>
+              <div class='description'>
+                <p><b>Freelance</b></p>
+                <p>Web Developer</p>
+              </div>
+            </div>
 
             <!-- <p class='text-center'>
               <a href="#" class='glyphicon glyphicon-chevron-down'></a>
@@ -341,42 +419,52 @@
           <div class="col-sm-6">
             <h3>Skills Summary</h3>
 
-            <p>
-              <b>JavaScript</b> &mdash; es5 &amp; es6
-              <div class="#progress">
-                <div class="#progress-bar" style="width: 90%"></div>
+            <div class='skill'>
+              <div class='type'>
+                <p><b>JavaScript</b></p>
               </div>
-            </p>
-
-
-            <p>
-              <b>TypeScript</b>
-              <div class="#progress">
-                <div class="#progress-bar" style="width: 78%"></div>
+              <div class='percentage'>
+                <div class="#progress">
+                  <div class="#progress-bar" style="width: 90%"></div>
+                </div>
               </div>
-            </p>
+            </div>
 
 
-            <p>
-              <b>AngularJS</b> &mdash; v1.5
-              <div class="#progress">
-                <div class="#progress-bar" style="width: 96%"></div>
+            <div class='skill'>
+              <div class='type'>
+                <p><b>TypeScript</b></p>
               </div>
-            </p>
-
-            <p>
-              <b>AngularJS</b> &mdash; v2
-              <div class="#progress">
-                <div class="#progress-bar" style="width: 58%"></div>
+              <div class='percentage'>
+                <div class="#progress">
+                  <div class="#progress-bar" style="width: 78%"></div>
+                </div>
               </div>
-            </p>
+            </div>
 
-            <p>
-              <b>BackboneJS </b> w/ MarionetteJS.
-              <div class="#progress">
-                <div class="#progress-bar" style="width: 88%"></div>
+
+            <div class='skill'>
+              <div class='type'>
+                <p><b>AngularJS</b></p>
               </div>
-            </p>
+              <div class='percentage'>
+                <div class="#progress">
+                  <div class="#progress-bar" style="width: 96%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class='skill'>
+              <div class='type'>
+                <p><b>BackboneJS</b></b></p>
+              </div>
+              <div class='percentage'>
+                <div class="#progress">
+                  <div class="#progress-bar" style="width: 88%"></div>
+                </div>
+              </div>
+            </div>
+
             <!-- <p class='text-center'>
               <a href="#" class='glyphicon glyphicon-chevron-down'></a>
             </p> -->
